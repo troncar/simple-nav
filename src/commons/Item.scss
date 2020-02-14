@@ -1,0 +1,19 @@
+.item {
+    cursor: pointer;
+    &--first {
+        font-weight: 500;
+    }
+
+    &--secondary {
+        font-weight: lighter;
+    }
+
+    &--left {
+        float: left;
+    }
+
+    &--right {
+        margin-left: 1rem;
+        float:right;
+    }
+}

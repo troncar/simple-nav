@@ -13,4 +13,10 @@
         width: 600px;
         align-items: center;
     }
+
+    .item {
+        &__container {
+            width: 100%;
+        }
+    }
 }
