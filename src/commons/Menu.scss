@@ -1,0 +1,53 @@
+@import "./../styles/color";
+@import "./../styles/medias.scss";
+
+.menu {
+    &__items {
+
+      &--md {
+        display: none;
+
+      // /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: $minwidthlg) {
+          display: block;
+        }
+      }
+
+      &--xs {
+        border-radius: 5px;
+        border: solid 1px $border-menu-xs;
+        cursor: pointer;
+        display: block;
+        height: 40px;
+        margin-left: 80%;
+        width: 40px;
+        &:hover{
+          border: solid 2px $border-menu-xs;
+        }
+
+        .menu-hm {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+
+          span {
+            align-items: center;     /* center items horizontally, in this case */
+            background-color: $lines-menuhm;
+            border-radius: 2px;
+            display: flex;           /* establish flex container */
+            flex-direction: column;  /* make main axis vertical */
+            height: 2px;
+            justify-content: center; /* center items vertically, in this case */
+            margin: 3px auto;
+            width: 60%;
+          }
+        }
+        // /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: $minwidthlg) {
+          display: none;
+        }
+      }
+    }
+}
