@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Item from '../commons/Item.jsx';
 import Logo from '../commons/Logo.jsx';
 import Menu from '../commons/Menu.jsx';
 
