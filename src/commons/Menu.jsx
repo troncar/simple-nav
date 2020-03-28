@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import Item  from './Item.jsx';
+import MenuMobile from './MenuMobile.jsx';
 
 import "./Menu.scss";
 
 class Menu extends Component {
-    state = {  }
+
+    // constructor(props){
+    //   super(props)
+    // }
 
     handlerClick = (event) => {
       switch (event.target.getAttribute('action')) {
@@ -17,9 +21,9 @@ class Menu extends Component {
       }
     }
 
-    handlerMenuMobile = (event) => {
-      console.log('Click')
-    }
+    // handlerMenuMobile = (event) => {
+    //   console.log('Click')
+    // }
 
     render() {
         return (
@@ -57,7 +61,7 @@ class Menu extends Component {
           </div>
           <div className="menu__container--sm">
             {/* Add button  */}
-            <div className="button-hm" onClick={this.handlerMenuMobile}>
+            <div className="button-hm" onClick={this.props.handlerClickMenuMobile}>
               <span></span>
               <span></span>
               <span></span>

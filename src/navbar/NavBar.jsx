@@ -8,10 +8,18 @@ import "./NavBar.scss";
 
 class NavBar extends Component {
 
-    state = {  }
+    constructor(props){
+      super(props)
+      this.state = {
+        openMenuMobile: false,
+      };
+    }
 
-    handlerClick = (event) => {
 
+    handlerClickMenuMobile = (event) => {
+      console.log('adsad');
+      this.setState({openMenuMobile: !this.state.openMenuMobile})
+      event.stopPropagation();
     }
 
     render() {
@@ -21,11 +29,11 @@ class NavBar extends Component {
                   <div className="navbar__container">
                       <Logo></Logo>
                       <div className="menu__wrapper">
-                          <Menu handlerClick={this.handlerClick}></Menu>
+                          <Menu handlerClickMenuMobile={this.handlerClickMenuMobile}></Menu>
                       </div>
                   </div>
               </div>
-            <MenuMobile></MenuMobile>
+              <MenuMobile display={this.state.openMenuMobile}></MenuMobile>
           </div>
         );
     }
