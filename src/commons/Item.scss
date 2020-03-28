@@ -1,4 +1,8 @@
+@import "./../styles/medias.scss";
+
 .item {
+   // /* Large devices (laptops/desktops, 992px and up) */
+   @media only screen and (min-width: $minwidthlg) {
     cursor: pointer;
     &--first {
         font-weight: 500;
@@ -16,4 +20,17 @@
         margin-left: 1rem;
         float:right;
     }
+  }
+
+  // Custom Classs
+
+  &--mobile {
+    width: 100%;
+    height: 2rem;
+    padding-left: 1rem;
+    display: flex;           /* establish flex container */
+    flex-direction: row;  /* make main axis vertical */
+    align-items: center;
+  }
+
 }
