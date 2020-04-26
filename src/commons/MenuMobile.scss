@@ -1,0 +1,41 @@
+@import "./../styles/color";
+@import "./../styles/medias.scss";
+
+@keyframes slideout {
+  0%   { top: 0px; }
+  25% {top: -400px;}
+  50% {top: -600px;}
+  80% {top: -1000px}
+  100% { top: -1024px }
+}
+@keyframes slidein {
+  0%   { top: -1024px; }
+  50% {top: -500px;}
+  70% {top: -150px}
+  80% {top: -50px}
+  80% {top: 0px}
+  100% { top: 40px }
+}
+
+.menu {
+  &__mobile{
+    min-height: 400px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: blanchedalmond;
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+
+    &.hidden{
+      top:-10000px;
+      animation:  slideout 1s ; /* IE 10+, Fx 29+ */
+    }
+
+    &.show{
+      top: 4rem;
+      animation:  slidein .5s ; /* IE 10+, Fx 29+ */
+    }
+  }
+
+}
