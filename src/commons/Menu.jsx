@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item  from './Item.jsx';
-import MenuMobile from './MenuMobile.jsx';
+
 
 import "./Menu.scss";
 
@@ -21,9 +21,6 @@ class Menu extends Component {
       }
     }
 
-    // handlerMenuMobile = (event) => {
-    //   console.log('Click')
-    // }
 
     render() {
         return (

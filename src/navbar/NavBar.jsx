@@ -17,7 +17,6 @@ class NavBar extends Component {
 
 
     handlerClickMenuMobile = (event) => {
-      console.log('adsad');
       this.setState({openMenuMobile: !this.state.openMenuMobile})
       event.stopPropagation();
     }

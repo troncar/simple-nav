@@ -2,13 +2,6 @@
 @import "./../styles/medias.scss";
 
 .menu {
-    &__mobile{
-      min-height: 400px;
-      width: 100%;
-      position: absolute;
-      z-index: -1;
-      background-color: blanchedalmond;
-    }
     &__container {
       &--md {
         width: 0;
