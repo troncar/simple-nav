@@ -21,6 +21,26 @@ class NavBar extends Component {
       event.stopPropagation();
     }
 
+
+    handlerClick = (event) => {
+      switch (event.target.getAttribute('action')) {
+        case 'redirect':
+            window.open(event.target.getAttribute('url'), '_blank');
+          break;
+        default:
+          console.log('No action pass')
+          break;
+      }
+    }
+
+  isEmpty =  (obj)  =>{
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+  }
+
     render() {
         return (
           <div>
@@ -28,14 +48,21 @@ class NavBar extends Component {
                   <div className="navbar__container">
                       <Logo></Logo>
                       <div className="menu__wrapper">
-                          <Menu handlerClickMenuMobile={this.handlerClickMenuMobile}></Menu>
+                          <Menu items={this.props.items} handlerClickMenuMobile={this.handlerClickMenuMobile}></Menu>
                       </div>
                   </div>
               </div>
-              <MenuMobile display={this.state.openMenuMobile}></MenuMobile>
+              <MenuMobile items={this.props.items}  display={this.state.openMenuMobile}></MenuMobile>
           </div>
         );
     }
 }
+
+NavBar.defaultProps = {
+  items:[{type: 'first', label: 'About us', position: 'right', handler:()=>{}, name:'about-us',action:'redirect', url:'https://www.youtube.com.mx/' },
+        {type: 'first', label: 'Login', position: 'right', handler:()=>{}, name:'login',action:'redirect', url:'/login' },
+        {type: 'secondary', label: 'Contact us', position: 'right', handler:()=>{}, name:'contact-us',action:'redirect', url:'/contact' }]
+}
+
 
 export default NavBar;
