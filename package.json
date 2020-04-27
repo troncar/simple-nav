@@ -1,6 +1,7 @@
 {
   "name": "simple-nav",
   "version": "0.1.0",
+  "homepage": "http://troncar.github.io/simple-nav/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
